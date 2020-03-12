@@ -1,4 +1,4 @@
-.home-page-container {
+.home-page-banner {
   height: 100vh;
   width: 100%;
   background-image: url('baby.jpg');
@@ -37,5 +37,39 @@
     &:hover {
         background-color: #F2F4F7;
     }
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .pic {
+    height: 800px;
+    width: 1300px;
+    background-image: url('albums.jpg');
+    background-size: cover;
+    margin-top: 70px;
   }
 }
