@@ -1,5 +1,15 @@
 class AlbumsController < ApplicationController
+    protect_from_forgery with: :null_session
+    skip_before_action :verify_authenticity_token
+
   def index
+    @category = Category.where(name: params[:name])
+    @albums = Album.where(category_id: @category.first)
+    albums_arr = []
+    @albums.each do |album|
+      albums_arr << album
+    end
+    render json: albums_arr
   end
 
   def show

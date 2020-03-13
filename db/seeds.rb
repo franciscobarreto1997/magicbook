@@ -7,9 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Category.destroy_all
+Album.destroy_all
 
 Category.create!(name: "Verticais")
 Category.create!(name: "Quadrados")
 Category.create!(name: "Horizontais")
+
+Album.create!(description: "nice album", price: 15, category_id: Category.second.id, size: "15x15")
 
 
