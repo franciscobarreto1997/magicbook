@@ -6,7 +6,6 @@ const changeNavbarColor = () => {
   document.addEventListener('scroll', () => {
     let rect = container.getBoundingClientRect()
     if (rect.y < -10) {
-      console.log("heyy")
       navbar.style.backgroundColor = "black";
       navbar.style.transition = "all 0.5s";
     } else {
