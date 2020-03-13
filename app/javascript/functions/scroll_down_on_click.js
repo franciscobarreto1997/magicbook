@@ -1,8 +1,7 @@
 const scrollDownOnClick = () => {
   $('.albuns').click(() => {
-    console.log("hahaha")
     $('html, body').animate({
-        scrollTop: $('.calma').offset().top
+        scrollTop: $('.tabs').offset().top
     }, 'slow');
   });
 }
