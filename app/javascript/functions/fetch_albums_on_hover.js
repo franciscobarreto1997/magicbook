@@ -39,8 +39,8 @@ const retrieveAlbumsFromApi = (name) => {
                       <div class="card-pic">
                       </div>
                       <div class="card-info">
-                        <p>${album.size}</p>
-                        <p>${album.price.toString()}</p>
+                        <p>Tamanho: ${album.size}</p>
+                        <p>${album.price.toString()}€</p>
                       </div>
                     </div>`
       albums.insertAdjacentHTML('beforeend', info)
