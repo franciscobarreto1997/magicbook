@@ -7,7 +7,9 @@ import "bootstrap";
 import changeNavbarColor from '../functions/change_navbar_color'
 import scrollDownOnClick from '../functions/scroll_down_on_click'
 import fetchAlbumsOnHover from '../functions/fetch_albums_on_hover'
+import responsiveNavbar from '../functions/responsive_navbar'
 
 changeNavbarColor()
 scrollDownOnClick()
 fetchAlbumsOnHover()
+responsiveNavbar()
