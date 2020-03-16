@@ -283,4 +283,36 @@
       margin-top: 50px;
     }
   }
+
+  .tabs {
+    padding: 20px;
+    margin-top: 30px;
+    height: auto;
+
+
+    .left {
+      height: 15vw;
+
+      .category {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 8vw;
+      }
+    }
+
+    .right {
+
+      .albums {
+
+        .card {
+          width: 100%;
+          height: 200px;
+        }
+
+      }
+
+    }
+  }
 }
