@@ -35,14 +35,17 @@ const retrieveAlbumsFromApi = (name) => {
   })
   .then((data) => {
     data.data.forEach((album) => {
+      console.log(album)
       const info = `<div class="card">
-                      <div class="card-pic">
-                      </div>
-                      <div class="card-info">
-                        <p>Tamanho: ${album.size}</p>
-                        <p>${album.price.toString()}€</p>
-                      </div>
-                    </div>`
+                      <a href="/albums/${album.id}">
+                        <div class="card-pic">
+                        </div>
+                        <div class="card-info">
+                          <p>Tamanho: ${album.size}</p>
+                          <p>${album.price.toString()}€</p>
+                        </div>
+                      </a>
+                    </div> `
       albums.insertAdjacentHTML('beforeend', info)
     })
   })

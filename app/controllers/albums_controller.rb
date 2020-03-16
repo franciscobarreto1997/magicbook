@@ -13,6 +13,8 @@ class AlbumsController < ApplicationController
   end
 
   def show
+    @album = Album.find(params[:id])
+    @category = Category.where(id: @album.category_id).first
   end
 
   def new
