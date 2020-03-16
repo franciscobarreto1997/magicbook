@@ -53,13 +53,15 @@ const injectCarousel = (mq) => {
     .then((data) => {
       data.data.forEach((album) => {
         const info = `<div class="card">
-        <div class="card-pic">
-        </div>
-        <div class="card-info">
-        <p>Tamanho: ${album.size}</p>
-        <p>${album.price.toString()}€</p>
-        </div>
-        </div>`
+                        <a href="/albums/${album.id}">
+                          <div class="card-pic">
+                          </div>
+                          <div class="card-info">
+                            <p>Tamanho: ${album.size}</p>
+                            <p>${album.price.toString()}€</p>
+                          </div>
+                        </div>
+                      </div>`
         albums.insertAdjacentHTML('beforeend', info)
       })
     })
@@ -131,11 +133,13 @@ const retrieveAlbumsFromApi = (category) => {
     // console.log(data)
     data.data.forEach((album) => {
       const info = `<div class="card">
-                      <div class="card-pic">
-                      </div>
-                      <div class="card-info">
-                        <p>Tamanho: ${album.size}</p>
-                        <p>${album.price.toString()}€</p>
+                      <a href="/albums/${album.id}">
+                        <div class="card-pic">
+                        </div>
+                        <div class="card-info">
+                          <p>Tamanho: ${album.size}</p>
+                          <p>${album.price.toString()}€</p>
+                        </div>
                       </div>
                     </div>`
       albums.insertAdjacentHTML('beforeend', info)
