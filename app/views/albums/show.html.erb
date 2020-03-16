@@ -1,2 +1,49 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<div class="show-page-container">
+  <div class="pictures">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="first-pic" id="pic">
+            <p>pic1</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="second-pic" id="pic">
+            <p>pic2</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="third-pic" id="pic">
+            <p>pic3</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+    </div>
+  </div>
+  <div class="info">
+    <div class="headers">
+      <h1><%= @category.name %></h1>
+      <h4><%= @album.size %></h4>
+      <p><%=  @album.price %>€</p>
+    </div>
+    <div class="album-description">
+      <p><%= @album.description %></p>
+    </div>
+    <div class="buy-button">
+      <a href="www.google.pt">Compre Agora</a>
+    </div>
+  </div>
+</div>
